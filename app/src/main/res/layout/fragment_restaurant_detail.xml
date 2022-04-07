@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout6"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.RestaurantDetailFragment" >
+
+
+    <ImageView
+        android:id="@+id/imageRestaurantDetail"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/textRestaurantDetail"
+        style="@style/Header2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:text="Restaurant Name"
+        app:layout_constraintEnd_toStartOf="@+id/imageLikedDetail"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageRestaurantDetail" />
+
+    <Button
+        android:id="@+id/buttonOverview"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="Overview"
+        app:icon="@drawable/ic_baseline_description_24"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintStart_toStartOf="@+id/textRestaurantDetail"
+        app:layout_constraintTop_toBottomOf="@+id/textRestaurantDetail" />
+
+    <Button
+        android:id="@+id/buttonReview"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="Reviews"
+        app:icon="@drawable/ic_baseline_rate_review_24"
+        app:layout_constraintEnd_toEndOf="@+id/imageLikedDetail"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toTopOf="@+id/buttonOverview" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="205dp"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <ProgressBar
+        android:id="@+id/progressImageDetailRestaurant"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/imageRestaurantDetail"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/imageRestaurantDetail"
+        app:layout_constraintTop_toTopOf="@+id/imageRestaurantDetail" />
+
+    <Button
+        android:id="@+id/buttonMenu"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="Menu"
+        app:icon="@drawable/ic_baseline_restaurant_menu_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonOverview" />
+
+    <ImageView
+        android:id="@+id/imageLikedDetail"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:src="@drawable/ic_baseline_favorite_24"
+        app:layout_constraintBottom_toBottomOf="@+id/textRestaurantDetail"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textRestaurantDetail" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
